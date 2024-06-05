@@ -3,6 +3,7 @@ import { FaBell } from "react-icons/fa";
 import Clientchart from './Clientchart';
 import SalesChart from './SalesChart';
 import Tablesale from './Tablesale';
+import Geochart from './Geochart'
 
 function Dashboard() {
     return (
@@ -88,14 +89,21 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className=''>
                 <div className='flex '>
                     <Clientchart />
                     <SalesChart />
                 </div>
-                <div className='max-w-lg  bg-slate-300 rounded-2xl mx-16 my-8  lg:w-1/2'> 
-                   <Tablesale />
+                <div className='flex justify-around'>
+                    <div className='max-w-lg  bg-slate-300 rounded-2xl mx-16 my-8  lg:w-1/2'>
+                    <p className='m-8 px-8 text-2xl'>Productos mas vendidos</p> 
+                    <Tablesale />
+                    </div>
+                    <div className='h-2/3 w-1/2 p-8 '>
+                        <Geochart />
+                    </div>
                 </div>
+                
             </div>
         </>
     )

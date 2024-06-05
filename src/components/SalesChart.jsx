@@ -19,6 +19,7 @@ const salesData = [
 function SalesChart () {
     return (
         <div className="h-72  bg-slate-300 rounded-2xl mr-6 ml-2 my-8  lg:w-1/2">
+          <p className='mt-4 ml-6 text-2xl'>Ventas</p>
         <ResponsiveLine
           data={salesData}
           margin={{ top: 90, right: 90, bottom: 110, left: 110 }}

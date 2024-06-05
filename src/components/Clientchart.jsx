@@ -13,6 +13,7 @@ const data = [
 function Clientchart () {
     return (
         <div className="h-72 bg-slate-300 rounded-2xl mx-16 my-8  lg:w-1/2">
+            <p className='mt-4 ml-6 text-2xl'>Total clientes</p>
             <ResponsiveBar
             data={data}
             keys={['clients']}
