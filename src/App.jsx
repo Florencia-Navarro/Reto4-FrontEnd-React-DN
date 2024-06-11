@@ -1,3 +1,6 @@
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { addUser } from "./redux/userSlice"
 import { Routes, Route } from "react-router-dom"
 import Sidebar from './components/Sidebar'
 import Dashboard from "./components/Dashboard"
@@ -10,6 +13,14 @@ import FormUser from "./components/FormUser"
 
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    fetch('https:/jsonplaceholder.typicode.com/users/1')
+    .then((response) => response.json())
+    .then((data) => dispatch(addUser(data)))
+    .catch((error) => console.log(error))
+  }, [])
 
   return (
     <>
