@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-import Dashboard from './Dashboard';
 
 import { MdDashboard } from "react-icons/md";
 import { IoPersonSharp } from "react-icons/io5";
@@ -15,23 +15,37 @@ import { FaPowerOff } from "react-icons/fa";
 function Sidebar() {
     return (
         <>
-            <div className="drawer lg:drawer-open">
+            <div className=" lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col bg-neutral-100">
-                    <Dashboard />
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
                 
-                </div> 
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
                     <ul className="menu p-4 w-80 min-h-full text-base-content  bg-white">
                     <div className='text-8xl mx-auto my-6'><FaPowerOff /></div>
-                    <li className='py-2'><a><MdDashboard />Dashboard</a></li>
-                    <li className='py-2'><a><IoPersonSharp />Clientes</a></li>
-                    <li className='py-2'><a><IoMdCart />Ventas</a></li>
-                    <li className='py-2'><a><BiSolidShoppingBag />Productos</a></li>
-                    <li className='py-2'><a><TbReportMoney />Reportes</a></li>
-                    <li className='py-2'><a><IoIosSettings />Configuración</a></li>
+                    <div className='flex'>
+                        <MdDashboard  className='m-3'/>
+                        <Link to="/"><li className='py-2'>Dashboard</li></Link>
+                    </div>
+                    <div className='flex'>
+                        <IoPersonSharp className='m-3'/>
+                        <Link to="clientes"><li className='py-2'>Clientes</li></Link>
+                    </div>
+                    <div className='flex'>
+                        <IoMdCart className='m-3'/>
+                        <Link to="ventas"><li className='py-2'>Ventas</li></Link>
+                    </div>
+                    <div className='flex'>
+                        <BiSolidShoppingBag className='m-3'/>
+                        <Link to="productos"><li className='py-2'>Productos</li></Link>
+                    </div>
+                    <div className='flex'>
+                        <TbReportMoney className='m-3'/>
+                        <Link to="reportes"><li className='py-2'>Reportes</li></Link>
+                    </div>
+                    <div className='flex'>
+                        <IoIosSettings className='m-3'/>
+                        <Link to="configuracion"><li className='py-2'>Configuración</li></Link>
+                    </div>
                     <div className='p-4 '>
                         <p className='font-bold'>Ayuda/Soporte</p>
                     </div>

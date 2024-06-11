@@ -4,6 +4,7 @@ import Clientchart from './Clientchart';
 import SalesChart from './SalesChart';
 import Tablesale from './Tablesale';
 import Geochart from './Geochart'
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     return (
@@ -17,6 +18,12 @@ function Dashboard() {
                     <div className="form-control">
                         <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
                     </div>
+                </div>
+                <div>
+                    <Link to='/formUser'>
+                        <button className="btn btn-outline">Agregar usuario</button>
+                    </Link>
+                    
                 </div>
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">
