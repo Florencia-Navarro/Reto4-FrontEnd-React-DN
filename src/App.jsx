@@ -1,6 +1,4 @@
-import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { addUser } from "./redux/userSlice"
 import { Routes, Route } from "react-router-dom"
 import Sidebar from './components/Sidebar'
 import Dashboard from "./components/Dashboard"
@@ -10,17 +8,13 @@ import Productos from './components/Productos'
 import Reportes from './components/Reportes'
 import Configuracion from './components/Configuracion'
 import FormUser from "./components/FormUser"
+import useFetch from "./useFetch"
 
 
 function App() {
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    fetch('https:/jsonplaceholder.typicode.com/users/1')
-    .then((response) => response.json())
-    .then((data) => dispatch(addUser(data)))
-    .catch((error) => console.log(error))
-  }, [])
+  useFetch('https://jsonplaceholder.typicode.com/users')
 
   return (
     <>
