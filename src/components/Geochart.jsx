@@ -1,6 +1,6 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import React from 'react'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
 
 function Geochart () {
   const locations = [
@@ -24,6 +24,6 @@ function Geochart () {
         </Marker>
       ))}
     </MapContainer>
-  );
+  )
 }
-export default Geochart;
+export default Geochart

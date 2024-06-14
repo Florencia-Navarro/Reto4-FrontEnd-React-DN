@@ -1,15 +1,19 @@
 import React from 'react'
-import { FaBell } from "react-icons/fa";
-import Clientchart from './Clientchart';
-import SalesChart from './SalesChart';
-import Tablesale from './Tablesale';
+import { FaBell } from "react-icons/fa"
+import Clientchart from './Clientchart'
+import SalesChart from './SalesChart'
+import Tablesale from './Tablesale'
 import Geochart from './Geochart'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Dashboard() {
     return (
         <>
             <div className="navbar bg-neutral-100">
+                <div>
+                <label htmlFor="my-drawer" className="btn btn-outline lg:hidden drawer-button">Menu</label>
+                <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                </div>
                 <div className="flex-1">
                     <div className='mx-14 my-4'>
                         <p className='text-xs'>Total ganancias</p>
@@ -19,6 +23,7 @@ function Dashboard() {
                         <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
                     </div>
                 </div>
+                
                 <div>
                     <Link to='/formUser'>
                         <button className="btn btn-outline">Agregar usuario</button>

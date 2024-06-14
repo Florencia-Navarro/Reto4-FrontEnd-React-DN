@@ -1,5 +1,5 @@
-import React from 'react';
-import { ResponsiveBar } from '@nivo/bar';
+import React from 'react'
+import { ResponsiveBar } from '@nivo/bar'
 
 const data = [
   { month: 'January', clients: 200 },

@@ -1,16 +1,15 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 
-import { MdDashboard } from "react-icons/md";
-import { IoPersonSharp } from "react-icons/io5";
-import { IoMdCart } from "react-icons/io";
-import { BiSolidShoppingBag } from "react-icons/bi";
-import { TbReportMoney } from "react-icons/tb";
-import { IoIosSettings } from "react-icons/io";
-import { SlEarphonesAlt } from "react-icons/sl";
-import { FaPowerOff } from "react-icons/fa";
-
+import { MdDashboard } from "react-icons/md"
+import { IoPersonSharp } from "react-icons/io5"
+import { IoMdCart } from "react-icons/io"
+import { BiSolidShoppingBag } from "react-icons/bi"
+import { TbReportMoney } from "react-icons/tb"
+import { IoIosSettings } from "react-icons/io"
+import { SlEarphonesAlt } from "react-icons/sl"
+import { FaPowerOff } from "react-icons/fa"
 
 function Sidebar() {
     return (
