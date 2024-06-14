@@ -1,21 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = []
 
 export const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers:{
+    reducers: {
         addUser: (state, action) => {
-            const users= action.payload
-            if(Array.isArray(users)){
-                state.push(...users)
-            } else  {
-                console.error("Expected an array of users")
-            }
+            const user = action.payload
+            state.push(user)
+        },
+        setUsers: (state, action) => {
+            
+            return action.payload
         }
     }
 })
 
-export const { addUser } = userSlice.actions
+export const { addUser, setUsers } = userSlice.actions
 export default userSlice.reducer

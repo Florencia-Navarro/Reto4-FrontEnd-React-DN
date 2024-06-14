@@ -27,13 +27,7 @@ function Clientes () {
           <td>{user.username}</td>
         </tr>
       )
-      }
-      {/* <tr>
-        <th></th>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.username}</td>
-      </tr>  */}   
+      }   
     </tbody>
   </table>
 </div>
